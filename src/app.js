@@ -31,15 +31,15 @@ app.use(express.static(publicStaticPath));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Index Guillermo Moran'
+        name: 'Guillermo Moran'
     });
 });
 
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Helping...',
-        name: 'Help Guillermo Moran'
+        title: 'Under construction...',
+        name: 'Guillermo Moran'
     });
 });
 
@@ -47,7 +47,7 @@ app.get('/help', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'Know my dog',
-        name: 'About Guillermo Moran'
+        name: 'Guillermo Moran'
     });
 });
 
