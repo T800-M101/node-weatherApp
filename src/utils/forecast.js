@@ -16,11 +16,13 @@ const forecast = (latitude, longitude, callback) => {
           const err = body.error.info; 
           callback(err, undefined);
        }else {
+          
         const weatherDescription = body.current.weather_descriptions[0]; 
+        const localTime = body.location.localtime.substring(11,16);
         const city = body.location.name;
         const temperature = body.current.temperature;
         const feelslike = body.current.feelslike;
-        callback(undefined, `${weatherDescription}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees.`);
+        callback(undefined, `${weatherDescription} at ${localTime}. It is currently ${temperature} °C out. It feels like ${feelslike} °C.`);
        }
     })
 
